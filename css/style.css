@@ -259,8 +259,8 @@ article {
 }
 #contourRouge {
     /*Ligne rouge autour du cercle*/
-    width: 805px;
-    height: 805px;
+    width: 795px;
+    height: 795px;
     outline: #cc2525 solid 10px;
     background-color: transparent;
     border-radius: 50%;
@@ -273,8 +273,8 @@ article {
 }
 #fondRouge {
     /*Fond rouge entre contour et cercle*/
-    width: 806px;
-    height: 806px;
+    width: 800px;
+    height: 800px;
     background-color: #cc2525;
     border-radius: 50%;
     display: flex;
@@ -283,8 +283,8 @@ article {
 }
 #ligneBlanche {
     /*Ligne blanche apparaissant au dessus de fond rouge*/
-    width: 805px;
-    height: 805px;
+    width: 795px;
+    height: 795px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -295,8 +295,8 @@ article {
 }
 #cercle {
     /*Cercle central*/
-    width: 800px;
-    height: 800px;
+    width: 790px;
+    height: 790px;
     background-color: #cc2525;
     border-radius: 50%;
     display: flex;
