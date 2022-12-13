@@ -1,0 +1,1040 @@
+/**************************************\
+|        Projet web final              |
+\**************************************/
+
+/********** Importation des fontes google ***********/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/********** Remise à 0 supp ***********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********** Conteneurs **********/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "Raleway";
+}
+body > div,
+body > article {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+p:hover h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+th:hover,
+legend:hover {
+    /*Pour éviter le changement de curseur sur le texte*/
+    cursor: default;
+}
+#acceuil,
+article,
+#galerie,
+#video,
+#tableau {
+    /*Marge entre les sections*/
+    margin-top: 100px;
+}
+
+/********** Classes globales **********/
+.ligneHaut {
+    transform-origin: left;
+    background-color: white;
+    transition: transform 0.5s, background-color 0s;
+}
+.ligneBas {
+    transform-origin: right;
+    background-color: white;
+    transition: transform 0.5s, background-color 0s;
+}
+.ligneDroite {
+    transform-origin: top;
+    background-color: white;
+    transition: transform 0.5s, background-color 0s;
+}
+.ligneGauche {
+    transform-origin: bottom;
+    background-color: white;
+    transition: transform 0.5s, background-color 0s;
+}
+
+/********** Balises de contenu **********/
+h2 {
+    font-size: 1.2em;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* ------- Menu ------- */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+}
+nav {
+    width: 40px;
+    height: 30px;
+    margin: 50px 0 0 50px;
+}
+.ligne {
+    /*lignes du menu hamburger*/
+    height: 4px;
+    width: 40px;
+    margin-bottom: 10px;
+    transition: 1s;
+    background-color: rgb(176, 176, 176);
+}
+header label input:checked ~ #hamburger .ligne {
+    /*Lignes hamburger après avoit été cliquées*/
+    background-color: black;
+}
+header label input ~ #hamburger {
+    /*Menu hamburger*/
+    transition: 0.5s;
+}
+#hamburger:hover {
+    /*Effet hover sur le hamburger*/
+    transform: scale(1.2);
+}
+#itemsDuMenu {
+    /*Menu déroulant*/
+    width: 200px;
+    height: 400px;
+    margin-top: 30px;
+    background: linear-gradient(90deg, #cc2525 0%, #8d0000 100%);
+    box-shadow: 5px 5px 10px 1px #000;
+    transition: 0.5s;
+    transform: translate(-300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+label input:checked ~ #itemsDuMenu {
+    /*Menu déroulant quand hamburger cliqué*/
+    transform: translate(0px);
+}
+
+header label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+header label {
+    height: 32px;
+}
+header #itemsDuMenu a span {
+    /*Icones du menu*/
+    margin: 10px;
+    margin-right: 15px;
+    transform: translate(0, 2px);
+    transition: 0.5s;
+}
+header #itemsDuMenu a:hover span {
+    /*Icones du menu à hover*/
+    transform: scale(1.6);
+}
+li {
+    /*Enlever les points de la liste*/
+    list-style: none;
+}
+header a {
+    font-size: 1.7em;
+}
+header a + div {
+    /*Lignes sous les items de la liste*/
+    height: 2px;
+    width: 130px;
+    margin-left: 50px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+}
+header a:hover + div {
+    /*Montrer la ligne sous l'item de la liste*/
+    transform: scaleX(1);
+}
+
+#ligne1,
+#ligne3 {
+    transform-origin: left;
+}
+
+#ligne2 {
+    transition: 0.5s;
+}
+header label input:checked ~ #hamburger #ligne1 {
+    transform: rotate(45deg);
+}
+header label input:checked ~ #hamburger #ligne2 {
+    transform: scaleX(0);
+}
+header label input:checked ~ #hamburger #ligne3 {
+    transform: rotate(-45deg);
+}
+
+/* ------- Acceuil ------- */
+#acceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#acceuil > div {
+    /*Carré central*/
+    background-color: #cc2525;
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#acceuil > div:hover {
+    /*Effet survol carré*/
+    transform: scale(1.5);
+}
+#acceuil > div > p {
+    /*Texte de l'acceuil*/
+    color: #cc2525;
+    font-size: 0.9em;
+    transition: 1s;
+    margin-right: 120px;
+    margin-top: 10px;
+}
+#acceuil > div:hover > p {
+    /*Effet texte quand survol carré*/
+    color: white;
+    transform: translate(121px);
+}
+#acceuil h1 {
+    /*Titre de l'acceuil*/
+    font-size: 3em;
+    margin: 0;
+    line-height: 50px;
+    margin: 30px 0 20px 0;
+    line-height: 45px;
+}
+#acceuil > div > div {
+    /*Ligne entre titre et texte*/
+    background-color: #cc2525;
+    height: 1px;
+    width: 1px;
+    margin: 0 7.5px;
+    transition: 1s;
+    overflow: hidden;
+    align-self: center;
+}
+#acceuil > div:hover > div {
+    /*Faire apparaitre ligne quand survol*/
+    width: 275px;
+    background-color: white;
+}
+
+/* ------- Article ------- */
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#contourRouge {
+    /*Ligne rouge autour du cercle*/
+    width: 805px;
+    height: 805px;
+    outline: #cc2525 solid 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, 1000px);
+    transition: 0.5s ease;
+    position: relative;
+}
+#fondRouge {
+    /*Fond rouge entre contour et cercle*/
+    width: 806px;
+    height: 806px;
+    background-color: #cc2525;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ligneBlanche {
+    /*Ligne blanche apparaissant au dessus de fond rouge*/
+    width: 805px;
+    height: 805px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    transform-origin: top;
+    transform: translate(0, -1000px);
+}
+#cercle {
+    /*Cercle central*/
+    width: 800px;
+    height: 800px;
+    background-color: #cc2525;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 20px 40px;
+}
+#fondRouge:hover #ligneBlanche {
+    /*Effet apparition lors de survol*/
+    transform: translate(0, 0);
+}
+#fondRouge:hover #contourRouge {
+    /*Redisposer contour pour éviter qu'il disparaisse*/
+    transform: translate(0, 0);
+}
+#cercle > h2 {
+    /*Titre*/
+    font-size: 3em;
+    font-weight: normal;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+#cercle > div {
+    /*Div contenant les2 colonnes de texte*/
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 50px;
+}
+#cercle > div > div {
+    /*Section contenant une colonne de texte*/
+    width: 50%;
+}
+#cercle h3 {
+    /*Sous-titre*/
+    text-align: center;
+    font-size: 1.4em;
+}
+#cercle p {
+    /*paragraphes*/
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+#cercle > div > div:nth-of-type(1) > p {
+    /*Paragraphes de la 2e colonne*/
+    padding-right: 20px;
+}
+#cercle > div > div:nth-of-type(2) > p {
+    /*Paragraphes de la 2e colonne*/
+    text-align: right;
+    padding-left: 20px;
+}
+
+#imageDeMoi {
+    /*Images de moi dans le texte*/
+    float: right;
+    padding: 10px;
+}
+#imageOrdi {
+    /*Images de l'ordinateur dans le texte*/
+    float: left;
+    padding: 5px;
+}
+#imageOrdi,
+#imageDeMoi {
+    /*Images dans le texte*/
+    width: 100px;
+    background-color: #8d0000;
+    box-shadow: 2px 2px 5px 1px #000;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+#imageOrdi:hover,
+#imageDeMoi:hover {
+    /*Effet de survol des images*/
+    background-color: white;
+    transform: scale(1.1);
+}
+article a {
+    /*Liens dans le texte*/
+    text-decoration: underline;
+    transition: 0.5s;
+}
+article a:hover {
+    /*Effet de survol des liens dans le texte*/
+    color: #8d0000;
+}
+
+/* ------- Galerie ------- */
+#galerie {
+    display: flex;
+    justify-content: flex-end;
+    overflow: auto;
+}
+#galerie > div:nth-of-type(1) {
+    /*Section contenant les carrés*/
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#galerie > div:nth-of-type(2) {
+    /*Section contenant le titre*/
+    background-color: #cc2525;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s;
+    transform-origin: right;
+    width: 120px;
+}
+#galerie > div:nth-of-type(2):hover {
+    /*Effet survol section du titre*/
+    transform: scaleX(1.3);
+}
+#galerie h2 {
+    /*Titre*/
+    transform: rotate(-90deg);
+    line-height: 20px;
+    height: 50px;
+    font-weight: normal;
+    font-size: 2.2em;
+    transition: 0.5s;
+}
+#galerie > div:nth-of-type(2):hover > h2 {
+    /*Effet survol titre*/
+    transform: scaleX(0.8) translate(-7px, -60px);
+}
+#galerie p {
+    /*Texte*/
+    color: transparent;
+    transition: 0.5s;
+}
+#galerie > div:nth-of-type(2):hover p {
+    /*Apparition du texte lors survol*/
+    transform: scaleX(0.8) translate(0, -30px);
+    color: white;
+}
+.galerieContenant {
+    /*Les carrés*/
+    width: 310px;
+    height: 350px;
+    background-color: #cc2525;
+    margin: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.galerieContenant > div:nth-child(3) {
+    /*Div contenant l'image*/
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.tropLarge {
+    /*Image dépassant en largeur (2 premieres)*/
+    max-height: 100%;
+    transition: 1s;
+}
+img.tropHaute {
+    /*Images dépassant en hauteur (4 dernieres)*/
+    max-width: 100%;
+    transition: 1s;
+}
+.galerieContenant:hover {
+    /*Effet survol carré*/
+    background-color: #8d0000;
+}
+.galerieContenant:hover img.tropLarge {
+    /*Effet sur image trop large quand survol carré*/
+    max-width: 100%;
+}
+.galerieContenant:hover img.tropHaute {
+    /*Effet sur image trop haute quand survol carré*/
+    max-height: 100%;
+}
+.galerieContenant:hover > div.ligneHaut,
+.galerieContenant:hover > div.ligneBas {
+    /*Effet survol lignes haut et bas*/
+    transform: scaleX(1);
+}
+
+.galerieContenant:hover > div.ligneDroite,
+.galerieContenant:hover > div.ligneGauche {
+    /*Effet survol lignes gauche et droite*/
+    transform: scaleY(1);
+}
+
+.galerieContenant > div.ligneHaut,
+.galerieContenant > div.ligneBas {
+    /*Ligne en haut et en bas de l'image*/
+    width: 250px;
+    margin: 0 30px;
+    height: 1px;
+    transform: scaleX(0);
+}
+.galerieContenant > div.ligneDroite,
+.galerieContenant > div.ligneGauche {
+    /*Ligne à gauche et à droite de l'image*/
+    height: 250px;
+    width: 1px;
+    transform: scaleY(0);
+    margin: 0 10px;
+}
+
+/* ------- Video ------- */
+#video {
+    display: flex;
+}
+#video > div:nth-of-type(1) {
+    /*Div contenant le triangle*/
+    background-color: transparent;
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+.triangle {
+    /*Flèche*/
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    transform: scaleX(1.6) translate(40px) scale(3.5);
+    border-left: 60px solid #cc2525;
+    transition: 1s;
+}
+.triangle:hover {
+    /*Effet survol flèche*/
+    transform: translate(130px) scaleX(1.6) scale(3.5);
+}
+.triangle > h2 {
+    /*Titre*/
+    transform: scaleX(0.6) translate(-75px, -10px);
+    transition: 1s;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+.triangle:hover > h2 {
+    /*Effet survol titre*/
+    transform: scaleX(0.6) translate(-95px, -32px);
+}
+.triangle > p {
+    /*Texte*/
+    color: transparent;
+    width: 35px;
+    transform: scaleX(0.6) translate(-130px);
+    font-size: 0.5em;
+    transition: 1s;
+}
+.triangle:hover > p {
+    /*Apparition texte*/
+    transform: scaleX(0.6) translate(-100px, -19px);
+    color: white;
+}
+#video > div:nth-of-type(2) {
+    /*Div contenant le colonnes*/
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+#video > div:nth-of-type(2) > div {
+    /*Les colonnes*/
+    background-color: #cc2525;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+    width: 20%;
+    transition: 0.5s;
+}
+#video > div:nth-of-type(2) > div:hover {
+    /*Effet survol colonnes*/
+    background-color: #8d0000;
+}
+#video > div:nth-of-type(2) > div > div:nth-of-type(3) {
+    /*Div contenant le texte et vidéo*/
+    background-color: #cc2525;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 700px;
+    transition: 0.5s;
+}
+#video > div:nth-of-type(2) > div:hover > div:nth-of-type(3) {
+    /*Effet survol div contenant le texte et vidéo*/
+    background-color: #8d0000;
+}
+iframe {
+    /*Vidéos*/
+    width: 100%;
+    height: 21%;
+    transition: 1s;
+    border: none;
+}
+#video > div:nth-of-type(2) > div:hover {
+    /*Effet survol carré*/
+    transform: scaleX(1.4);
+}
+#video > div:nth-of-type(2) > div > div > h3,
+#video > div:nth-of-type(2) > div > div > iframe,
+#video > div:nth-of-type(2) > div > div > p {
+    /*Contenu*/
+    transition: 0.5s;
+    transform-origin: center;
+}
+#video > div:nth-of-type(2) > div:hover > div > h3,
+#video > div:nth-of-type(2) > div:hover > div > iframe,
+#video > div:nth-of-type(2) > div:hover > div > p {
+    /*Effet survol contenu*/
+    transform: scaleY(1.4);
+}
+#video > div:nth-of-type(2) > div:hover > div.ligneBas,
+#video > div:nth-of-type(2) > div:hover > div.ligneHaut,
+#video > div:nth-of-type(2) > div:hover > div.ligneDroite,
+#video > div:nth-of-type(2) > div:hover > div.ligneGauche {
+    /*Effet survol lignes*/
+    transform: scale(1);
+    background-color: white;
+}
+#video > div:nth-of-type(2) > div > div > h3 {
+    /*Sous-titre*/
+    padding-bottom: 50px;
+    margin: 0 10px;
+}
+#video > div:nth-of-type(2) > div > div > p {
+    /*Texte*/
+    margin: 0 10px;
+    margin-bottom: 120px;
+}
+#video > div:nth-of-type(2) > div > div.ligneHaut,
+#video > div:nth-of-type(2) > div > div.ligneBas {
+    /*Lignes en haut et bas du contenu*/
+    width: 90%;
+    height: 1px;
+    transform: scaleX(0.01);
+    margin: 0 5%;
+    background-color: transparent;
+}
+#video > div:nth-of-type(2) > div > div.ligneDroite,
+#video > div:nth-of-type(2) > div > div.ligneGauche {
+    /*Lignes à gauche et à droite du contenu*/
+    height: 90%;
+    width: 1px;
+    transform: scaleY(0.005);
+    background-color: transparent;
+}
+#video > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) {
+    /*Premiere colonne*/
+    justify-content: flex-start;
+}
+#video > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) {
+    /*Deuxieme colonne*/
+    justify-content: center;
+}
+#video > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) {
+    /*3e colonne*/
+    justify-content: flex-end;
+}
+
+/* ------- Tableau ------- */
+#tableau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8d0000;
+}
+table {
+    width: 800px;
+    font-size: 0.8em;
+    border-spacing: 10px;
+    margin-left: -150px;
+}
+#tableau div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+caption {
+    /*Titre*/
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+th {
+    /*Titres de rangés/colonnes*/
+    background-color: #cc2525;
+    color: white;
+    padding: 4px 0;
+    padding: 10px;
+}
+td {
+    /*Contenu des rangés/colonnes*/
+    text-align: center;
+    color: #8d0000;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    height: 10px;
+    transition: 0.5s;
+}
+td:hover {
+    /*Effet de survol du contenu*/
+    background-color: #cc2525;
+    color: white;
+    transform: scale(1.05);
+    cursor: default;
+}
+table tr {
+    /*Rangée*/
+    height: 80px;
+}
+table th:hover ~ td {
+    /*Effet de survol des titre de rangés sur le contenu des rangés*/
+    background-color: #cc2525;
+    color: white;
+    transform: scale(1.05);
+}
+.grandeSection:hover {
+    /*Limitation de l'agrandissement des plus grandes cases*/
+    transform: scale(1.02);
+}
+th:hover ~ .grandeSection {
+    /*Limitation de l'agrandissement des plus grandes cases par rangé*/
+    transform: scale(1.02);
+}
+table thead tr:first-of-type th:first-of-type {
+    /*Cacher le premier th inutile*/
+    background-color: transparent;
+}
+
+/* ------- Inscription ------- */
+#inscription {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#inscription > div {
+    /*Parallèle*/
+    background-color: #cc2525;
+    width: 100%;
+    height: 100%;
+    transform: skew(30deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inscription h2 {
+    /*Titre*/
+    text-align: center;
+    font-size: 2em;
+    margin: 40px 0;
+}
+#inscription > div > div {
+    /*Div contenant le titre et le formulaire*/
+    transform: skew(-30deg);
+    color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+#inscription form {
+    /*Le formulaire*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#inscription fieldset {
+    /*Section générale*/
+    border: none;
+}
+#inscription input {
+    /*Champs général*/
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin-top: 10px;
+}
+#inscription input::placeholder {
+    color: lightgray;
+}
+#inscription fieldset:nth-of-type(1) > div {
+    /*Section nom*/
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+#inscription fieldset:nth-of-type(1) > div > input {
+    /*2 champs nom prénom*/
+    width: 45%;
+}
+#inscription fieldset:nth-of-type(2) {
+    /*Section courriel*/
+    display: flex;
+    flex-direction: column;
+}
+#inscription fieldset:nth-of-type(3) > div {
+    /*Section téléphone*/
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+#inscription fieldset:nth-of-type(3) > div > input {
+    /*3 champs téléphone*/
+    width: 30%;
+}
+#inscription fieldset:nth-of-type(4) > div {
+    /*Section notification*/
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+#inscription fieldset:nth-of-type(5) > div {
+    /*Section choix*/
+    width: 600px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#inscription fieldset:nth-of-type(5) > div > label {
+    /*Choix de la section choix*/
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+#inscription fieldset:last-of-type {
+    /*Section bouton*/
+    display: flex;
+    justify-content: center;
+}
+#inscription fieldset:last-of-type input {
+    /*Bouton*/
+    margin: 0 20px;
+}
+#bouton {
+    display: flex;
+    justify-content: space-between;
+}
+#boutons input {
+    background-color: #8d0000;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    transition: 0.5s;
+    background: #8d0000;
+    color: white;
+}
+#boutons input:hover {
+    /*Effet survol bouton*/
+    transform: scale(1.2);
+    background-color: white;
+    color: #8d0000;
+}
+.grandLabel,
+#inscription legend {
+    /*Redimensionner legend comme label*/
+    font-size: 1.3em;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    /*Enlever le cadrage lors du remplissage des champs*/
+    outline: none;
+}
+
+/* ------- Footer ------- */
+footer {
+    background-color: #8d0000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 300px;
+    padding: 30px;
+    padding-bottom: 5px;
+}
+footer > div {
+    /*4 sections du footer*/
+    height: 100%;
+    width: 25%;
+    padding: 20px;
+}
+footer h3 {
+    /*Titre section footer*/
+    font-size: 1.4em;
+}
+footer span {
+    /*Icones à coté des titres*/
+    transform: scale(1.3);
+    margin-right: 10px;
+    height: 10px;
+}
+footer img {
+    /*logo TIM*/
+    width: 40px;
+    margin-right: 10px;
+}
+.ligneTitreFooter {
+    /*Lignes sous les titres*/
+    height: 2px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+footer div:nth-of-type(1) div.ligneTitreFooter {
+    /*1ere ligne*/
+    width: 140px;
+}
+footer div:nth-of-type(2) div.ligneTitreFooter {
+    /*2eme ligne*/
+    width: 100px;
+}
+footer div:nth-of-type(3) div.ligneTitreFooter {
+    /*3eme ligne*/
+    width: 200px;
+}
+footer div:nth-of-type(4) div.ligneTitreFooter {
+    /*4eme ligne*/
+    width: 145px;
+}
+.ligneFooter {
+    /*ligne sous les icones réseaux sociaux et liens*/
+    background-color: white;
+    transform: scaleX(0);
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+/*2e section Liens*/
+footer h6 {
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+footer div:nth-of-type(2) a {
+    /*Liens*/
+    font-size: 0.9em;
+}
+footer > div:nth-of-type(2) .ligneFooter {
+    /*Derniere ligne sous les liens*/
+    height: 1px;
+    width: 220px;
+    margin-top: 5px;
+}
+footer > div:nth-of-type(2) .ligneFooter:last-of-type {
+    /*Ligne sous les liens*/
+    width: 290px;
+}
+footer > div:nth-of-type(2) a:hover + div {
+    /*Ligne sous les liens hover*/
+    transform: scaleX(1);
+}
+
+/*3e section département*/
+footer > div:nth-of-type(3) {
+    /*3eme section*/
+    padding-right: 80px;
+}
+
+/*4e section (Me suivre et politique de confidentialité)*/
+footer > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*4e section Me suivre */
+footer > div:nth-of-type(4) img {
+    /*Icones réseaux sociaux*/
+    transition: 0.5s;
+}
+footer > div:nth-of-type(4) img:hover {
+    /*Effet survol icones réseaux sociaux*/
+    transform: scale(1.3);
+}
+footer > div:nth-of-type(4) div > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70px;
+}
+footer > div:nth-of-type(4) div > div:nth-of-type(2) div {
+    height: 1px;
+    width: 40px;
+    margin-top: 5px;
+}
+
+footer > div:nth-of-type(4) div > div:nth-of-type(2) > a:hover + div {
+    /*faire apparaitre les lignes sur hover*/
+    transform: scaleX(1);
+}
+
+/*5e section Politique de confidentialité*/
+footer > div:last-of-type div:nth-of-type(2) {
+    height: 5px;
+    width: 300px;
+}
+footer > div:last-of-type .ligneFooter {
+    /*ligne du liens*/
+    height: 1px;
+    width: 280px;
+    margin-top: 5px;
+}
+footer > div:last-of-type a:hover + div {
+    /*transformation ligne du lien*/
+    transform: scaleX(1);
+}
+
+/* ------- Scrollbar ------- */
+::-webkit-scrollbar {
+    background-color: lightgray;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(204, 37, 37);
+    background: linear-gradient(0deg, rgba(204, 37, 37, 1) 0%, rgba(141, 0, 0, 1) 100%);
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}

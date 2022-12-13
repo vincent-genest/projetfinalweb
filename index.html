@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!--
+               Projet web final
+                Vincent Genest
+            1W1 Session Automne  2022
+        -->
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex">
+        <meta name="author" content="Vincent Genest">
+        <title>Portfolio 2022</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="images/moiEn16Bit.png" />
+    </head>
+    <body>
+        <!--Début header-->
+        <header>
+            <!--Début nav-->
+            <nav>
+                <!--Début label (menu hamburger)-->
+                <label>
+                    <input type="checkbox" />
+                    <!--Génere une erreur de html-->
+                    <div id="hamburger">
+                        <div class="ligne" id="ligne1"></div>
+                        <div class="ligne" id="ligne2"></div>
+                        <div class="ligne" id="ligne3"></div>
+                    </div>
+                    <!--Début menu déroulant-->
+                    <div id="itemsDuMenu">
+                        <li>
+                            <a href="#acceuil"> <span class="material-symbols-outlined"> home </span>Acceuil</a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="#article"><span class="material-symbols-outlined"> subject </span>Article</a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="#galerie"> <span class="material-symbols-outlined"> image </span>Galerie</a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="#video"> <span class="material-symbols-outlined"> play_arrow </span>Video</a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="#tableau"> <span class="material-symbols-outlined"> table_chart </span>Tableau</a>
+                            <div></div>
+                        </li>
+                        <li>
+                            <a href="#inscription"><span class="material-symbols-outlined"> edit_note </span>Inscription</a>
+                            <div></div>
+                        </li>
+                    </div>
+                </label>
+            </nav>
+        </header>
+
+        <!--Début Acceuil-->
+        <div id="acceuil">
+            <div>
+                <h1>Portfolio 2022</h1>
+                <div></div>
+                <!--Ligne sous le titre-->
+                <p>
+                    Site réalisé par Vincent Genest dans le cadre du cours 582-1W1 – Mise en page web en Techniques d’intégration multimédia au
+                    Collège de Maisonneuve pour le TP2 à la session Automne 2022
+                </p>
+            </div>
+        </div>
+
+        <!--Début article-->
+        <article id="article">
+            <!--Div contenant le cercle en entier-->
+            <div>
+                <!--Div cachant le trou circulaire sous la ligne blanche lorsqu'elle n'est pas présente-->
+                <div id="fondRouge">
+                    <!--Div contenant le carré blanc utilisé pour faire la ligne blanche-->
+                    <div id="ligneBlanche">
+                        <!--Div contour rouge autour de la ligne blanche-->
+                        <div id="contourRouge">
+                            <!--Div contenant le cercle central-->
+                            <div id="cercle">
+                                <h2>Article</h2>
+                                <div>
+                                    <div>
+                                        <h3>Sur moi</h3>
+                                        <p>
+                                            <img src="images/moiEn16Bit.png" alt="Image pixelisé de moi-même" id="imageDeMoi" />
+                                            Je suis actuellement un étudiant de première année au cégep de Maisonneuve en technique d’intégration
+                                            multimédia. Mon intérêt pour le domaine du jeu vidéo viens d’abord de mon amour des jeux vidéo depuis très
+                                            jeune, puis de l’atelier parascolaire organisé par Fusion Jeunesse à mon école secondaire. Je suis tombé
+                                            sous le charme de la programmation, ce qui m’a mené à choisir ce programme au cégep pour la conception de
+                                            jeu vidéo.
+                                        </p>
+                                        <p>
+                                            Une fois dans le programme, j’ai suivi les différents cours ayant rapport à l’intégration multimédia et
+                                            j’ai découvert toutes sortes de nouveaux aspects intéressants au monde multimédia, que ce soit le cinéma,
+                                            le montage photo ou, comme vous le voyez, la conception de page web. Tous ces cours connexes à mon but
+                                            initial se sont transformés en passion tout autant valide.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>Sur mon travail</h3>
+                                        <p>
+                                            Pour ma première session en TIM, j’ai jusqu’à maintenant réalisé plusieurs projets Photoshop (affiche de
+                                            film, maquette web, divers montages...), montages vidéo et audio (environnement sonore, court métrage...),
+                                            un jeu vidéo et un site web (celui-ci). Certains de ces projets sont inclus dans la section
+                                            <a href="#galerie">galerie</a> et <a href="#video">vidéos</a>.
+                                        </p>
+                                        <p>
+                                            <img src="images/IconeOrdi.png" alt="Image pixelisé d'un ordinateur" id="imageOrdi" />
+                                            Je m’inspire beaucoup du contenu médiatique que je consomme, surtout de jeux vidéo, films et livres, pour
+                                            mes projets. C’est une façon de combiner mes projets scolaires à mes intérêts. La plupart des images
+                                            utilisées dans mes projets viennent également de l’internet. Je m’illustre particulièrement en design et
+                                            moins en création artistique.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--Début Galerie-->
+        <div id="galerie">
+            <!--Début div avec carré-->
+            <div>
+                <!--Début carré 1-->
+                <div class="galerieContenant">
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div><img class="tropLarge" src="images/BobRoss.jpg" alt="Montage Bob Ross" /></div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début carré 2e-->
+                <div class="galerieContenant">
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div><img class="tropLarge" src="images/Doggy2.jpg" alt="Montage Chiens colorés" /></div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début carré 3-->
+                <div class="galerieContenant">
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div><img class="tropHaute" src="images/FormeCouleurBehance.jpg" alt="Montage Formes de couleurs" /></div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début carré 4-->
+                <div class="galerieContenant">
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div>
+                        <img class="tropHaute" src="images/Londres.jpg" alt="Montage de Londre" />
+                    </div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début carré 5-->
+                <div class="galerieContenant">
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div>
+                        <img class="tropHaute" src="images/Toucanda.png" alt="Montage entre un Toucan et un Panda" />
+                    </div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début carré 6-->
+                <div class="galerieContenant">
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div>
+                        <img class="tropHaute" src="images/Tp2bPoster1.jpg" alt="Poster d'un film de zombie" />
+                    </div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+            </div>
+            <!--Début div avec titre-->
+            <div>
+                <h2>Galerie</h2>
+                <p>Projets réalisés en cours 1M2-MA - conception graphique à l'aide de photoshop</p>
+            </div>
+        </div>
+
+        <!--Début Vidéo-->
+        <div id="video">
+            <!--Début div triangle-->
+            <div>
+                <div class="triangle">
+                    <h2>Vidéos</h2>
+                    <p>Vidéos réalisées au cours de ma vie</p>
+                </div>
+            </div>
+            <!--Début div avec colonne-->
+            <div>
+                <!--Début colonne 1 -->
+                <div>
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div>
+                        <h3>Le Point</h3>
+                        <p>Court métrage expérimental réalisé pour le cours de création vidéo à la session 2022, réalisé par moi et David Rousseau</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yM4w-CqFZAo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début colonne 2 -->
+                <div>
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div>
+                        <h3>Le destin d'une coquine</h3>
+                        <p>
+                            Qui ne connait pas la fameuse chanteuse ukrainienne El Faforrito Del Mamelonne? Toute son histoire de sa naissance hors du
+                            commun jusqu'à ses succès mondiaux tel que <i>Poteau de Métal</i>, est racontée dans ce cours métrage.
+                        </p>
+                        <iframe
+                            src="https://www.youtube.com/embed/OSS7mbDVbHM"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+                <!--Début colonne 3 -->
+                <div>
+                    <div class="ligneHaut"></div>
+                    <div class="ligneGauche"></div>
+                    <div>
+                        <h3>DetecDave</h3>
+                        <p>
+                            Film réalisé au secondaire comme projet final en anglais. On y raconte les folles aventures du détective le moins fiable
+                            sur terre, mais sans aucun doute le plus <i>cool</i>.
+                        </p>
+                        <iframe
+                            src="https://www.youtube.com/embed/KhBmWSbcM-8"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <div class="ligneDroite"></div>
+                    <div class="ligneBas"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début Tableau-->
+        <div id="tableau">
+            <table>
+                <caption>
+                  Qualifications par cours
+                </caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Conception graphique</th>
+                        <th>Création vidéo</th>
+                        <th>Mise en page web</th>
+                        <th>Intercativité en jeu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Année(s) d'expérience</th>
+                        <td colspan="4" class="grandeSection">0.5</td>
+                    </tr>
+                    <tr>
+                        <th>Nombre de projets importants réalisés</th>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Meilleur atout par cours</th>
+                        <td>Sens du design</td>
+                        <td>Sens du rythme</td>
+                        <td>Sens du design</td>
+                        <td>Résolution de problème</td>
+                    </tr>
+                    <tr>
+                        <th>Moyenne par cours</th>
+                        <td>98%</td>
+                        <td>99%</td>
+                        <td>97%</td>
+                        <td>98%</td>
+                    </tr>
+                    <tr>
+                        <th>Intérêt par cours</th>
+                        <td colspan="2" class="grandeSection">8/10</td>
+                        <td colspan="2" class="grandeSection">9/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Début Inscription-->
+        <div id="inscription">
+            <!--Début parallèlogramme -->
+            <div>
+                <!--Début div avec titre et form -->
+                <div>
+                    <h2>Inscription à mon infolettre</h2>
+                    <!--Début form-->
+                    <form action="#">
+                        <!--Début section 1 (nom) -->
+                        <fieldset>
+                            <label class="grandLabel"> Votre Nom </label>
+                            <div><input type="text" placeholder="Prénom" required /><input type="text" placeholder="Nom de famille" required /></div>
+                        </fieldset>
+                        <!--Début section 2 (courriel) -->
+                        <fieldset>
+                            <label class="grandLabel">Votre courriel </label>
+                            <input type="email" placeholder="example@gmail.com" required />
+                        </fieldset>
+                        <!--Début section 3 (téléphone) -->
+                        <fieldset>
+                            <label class="grandLabel">Téléphone</label>
+                            <div>
+                                <input type="tel" placeholder="###" required />
+                                <input type="tel" placeholder="###" required />
+                                <input type="tel" placeholder="####" required />
+                            </div>
+                        </fieldset>
+                        <!--Début section 4 (notification) -->
+                        <fieldset>
+                            <legend>Je souhaite recevoir des notifications</legend>
+                            <div>
+                                <label> <input type="radio" name="ouiNon" required /> Oui</label>
+                                <label><input type="radio" name="ouiNon" required /> Non</label>
+                            </div>
+                        </fieldset>
+                        <!--Début section 5 (choix) -->
+                        <fieldset>
+                            <legend>Je souhaite m'abonner aux :</legend>
+                            <div>
+                                <label><input type="checkbox" /> nouvelles vidéos</label>
+                                <label><input type="checkbox" /> nouveaux projets photo</label>
+                                <label><input type="checkbox" /> nouvelles pages web</label>
+                                <label><input type="checkbox" /> nouveaux jeux</label>
+                            </div>
+                        </fieldset>
+                        <!--Début section 6 (boutons) -->
+                        <fieldset id="boutons">
+                            <input type="reset" value="Vider" />
+                            <input type="submit" value="Envoyer" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Début Footer-->
+        <footer>
+            <!--Début section 1 (Adresses) -->
+            <div>
+                <h3><span class="material-symbols-outlined"> school </span> Adresses</h3>
+                <div class="ligneTitreFooter"></div>
+                <p>3 800, rue Sherbrooke Est Montréal (Québec) H1X 2A2 | 514 254-7131</p>
+            </div>
+            <!--Début section 2 (Liens) -->
+            <div>
+                <h3><span class="material-symbols-outlined"> link </span> Liens</h3>
+                <div class="ligneTitreFooter"></div>
+                <h6>Site du cégep Maisonneuve :</h6>
+                <a href="https://www.cmaisonneuve.qc.ca/" target="_blank">https://www.cmaisonneuve.qc.ca/</a>
+                <div class="ligneFooter"></div>
+                <h6>Site du département TIM :</h6>
+                <a href="https://tim.cmaisonneuve.qc.ca/" target="_blank">https://tim.cmaisonneuve.qc.ca/</a>
+                <div class="ligneFooter"></div>
+                <h6>Source de l'image :</h6>
+                <a href=https://imgbin.com/png/KUbZcUiu/windows-95-computer-icons-windows-3-1x-laptop-png target="_blank">https://imgbin.com/png/KUbZcUiu/windows-95-computer-icons-windows-3-1x-laptop-png</a>
+                <div class="ligneFooter"></div>
+            </div>
+            <!--Début section 3 (Département) -->
+            <div>
+                <h3><img src="images/LogoTim.png" alt="Logo du département" />Département</h3>
+                <div class="ligneTitreFooter"></div>
+                <p>
+                    Le programme Techniques d'intégration multimédia est une formation collégiale qui étudie le Web, l'infographie, le graphisme, le
+                    design, la programmation et le montage vidéo.
+                </p>
+            </div>
+            <!--Début section 4 (Résaux et Avis) -->
+            <div>
+                <!--Début réseaux -->
+                <div>
+                    <h3><span class="material-symbols-outlined"> person_add </span> Me suivre</h3>
+                    <div class="ligneTitreFooter"></div>
+                    <div>
+                        <a href="https://www.behance.net/vincentgenest1" target="_blank"
+                            ><img src="https://s2.svgbox.net/social.svg?ic=behance&color=ffffff" alt="Icone Behance" width="32" height="32"
+                        /></a>
+                        <div class="ligneFooter"></div>
+                        <a href="https://www.youtube.com/channel/UC7Qvf947eLGDVv7zTk0cSRg" target="_blank"
+                            ><img src="https://s2.svgbox.net/social.svg?ic=youtube&color=ffffff" alt="Icone Youtube" width="32" height="32"
+                        /></a>
+                        <div class="ligneFooter"></div>
+                        <a href="https://www.instagram.com/vincent_genest_/?hl=fr" target="_blank"
+                            ><img src="https://s2.svgbox.net/social.svg?ic=instagram&color=ffffff" alt="Icone Instagram" width="32" height="32"
+                        /></a>
+                        <div class="ligneFooter"></div>
+                        <a href="https://github.com/joejoenachos" target="_blank"
+                            ><img src="https://s2.svgbox.net/social.svg?ic=github&color=ffffff" alt="Icone GitHub" width="32" height="32"
+                        /></a>
+                        <div class="ligneFooter"></div>
+                        <a href="https://www.facebook.com/vincent.genest.900" target="_blank"
+                            ><img src="https://s2.svgbox.net/social.svg?ic=facebook&color=ffffff" alt="Icone Facebook" width="32" height="32"
+                        /></a>
+                        <div class="ligneFooter"></div>
+                    </div>
+                </div>
+                <!--Début Avis -->
+                <div>
+                    <a href="#"> Avis de confidentialité | Privacy Notice </a>
+                    <div class="ligneFooter"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
