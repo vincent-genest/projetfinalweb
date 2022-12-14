@@ -215,7 +215,7 @@ header label input:checked ~ #hamburger #ligne3 {
 }
 #acceuil > div > p {
     /*Texte de l'acceuil*/
-    color: #cc2525;
+    color: transparent;
     font-size: 0.9em;
     transition: 1s;
     margin-right: 120px;
