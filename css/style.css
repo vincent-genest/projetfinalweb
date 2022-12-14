@@ -318,8 +318,8 @@ article {
     /*Titre*/
     font-size: 3em;
     font-weight: normal;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #cercle > div {
     /*Div contenant les2 colonnes de texte*/
@@ -347,12 +347,12 @@ article {
 }
 #cercle > div > div:nth-of-type(1) > p {
     /*Paragraphes de la 2e colonne*/
-    padding-right: 20px;
+    padding-right: 10px;
 }
 #cercle > div > div:nth-of-type(2) > p {
     /*Paragraphes de la 2e colonne*/
     text-align: right;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 #imageDeMoi {
@@ -370,6 +370,7 @@ article {
     /*Images dans le texte*/
     width: 100px;
     background-color: #8d0000;
+    margin: 5px;
     box-shadow: 2px 2px 5px 1px #000;
     border-radius: 50%;
     transition: 0.5s;
